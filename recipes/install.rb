@@ -40,6 +40,12 @@ user node["hopsworks"]["user"] do
   not_if "getent passwd #{node["hopsworks"]["user"]}"
 end
 
+group node.hops.group do
+  action :modify
+  members ["#{node.hopsworks.user}"]
+  append true
+end
+
 
 directory node["hopsworks"]["dir"]  do
   owner node["hopsworks"]["user"]
