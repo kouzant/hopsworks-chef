@@ -1643,7 +1643,7 @@ attribute "ndb/MaxNoOfConcurrentTransactions",
 
 #
 #
-# Dela
+# Dela  - please do not change without checking dela code
 #
 #
 
@@ -1675,6 +1675,26 @@ attribute "dela/dir",
           :description => "dela Installation directory.",
           :type => 'string'
 
+# Hopsworks Dela
+  
+attribute "hopsworks/dela/domain",
+          :description => "Hopsworks Dela public domain",
+          :type => 'string'
+  
+attribute "hopsworks/dela/public_port",
+          :description => "Hopsworks Dela public port",
+          :type => 'string'
+  
+# Hops site
+
+attribute "hopsworks/dela/hops_site/domain",
+          :description => "Dela hops site public domain",
+          :type => 'string'
+
+attribute "hopsworks/dela/hops_site/port",
+          :description => "Dela hops site port",
+          :type => 'string'
+  
 
 
 #
