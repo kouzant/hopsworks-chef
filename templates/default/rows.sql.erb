@@ -193,25 +193,17 @@ INSERT INTO variables VALUES ("hopsutil_version", "<%= node["hops"]["util_versio
 -- dela
 --
 
-INSERT INTO variables VALUES ("dela_cluster_up","<%= @dela_ip %>");
+INSERT INTO variables VALUES ("dela_cluster_ip","<%= @dela_ip %>");
 
-INSERT INTO variables VALUES ("dela_cluster_http_port","<%= ["hopsworks"]["dela"]["cluster_http_port"] %>");
+INSERT INTO variables VALUES ("dela_cluster_http_port","<%= @dela_cluster_http_port %>");
 
-INSERT INTO variables VALUES ("dela_hopsworks_public_port","<%= ["hopsworks"]["dela"]["public_hopsworks_port"] %>");
+INSERT INTO variables VALUES ("dela_hopsworks_public_port","<%= @dela_hopsworks_public_port %>");
 
 -- dela old
 
-INSERT INTO variables VALUES ("hopsworks_domain","<%= node["hopsworks"]["dela"]["domain"] %>");
-
-INSERT INTO variables VALUES ("hopsworks_public_port","<%= node["hopsworks"]["dela"]["public_port"] %>");
-
 INSERT INTO variables VALUES ("hopsworks_certificate","<%= node["hopsworks"]["dela"]["certificate"] %>");
 
-INSERT INTO variables VALUES ("dela_endpoint","http://<%= @dela_ip %>:<%= @dela_port %>");
-
 INSERT INTO variables VALUES ("hops_site_endpoint","<%= node["hopsworks"]["dela"]["hops_site"]["base_uri"] %>");
-
-INSERT INTO variables VALUES ("public_search_endpoint","<%= node["hopsworks"]["dela"]["public_search_endpoint"] %>");
 
 --
 

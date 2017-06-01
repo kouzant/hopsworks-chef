@@ -1684,16 +1684,6 @@ attribute "hopsworks/dela/public_hopsworks_port",
           :description => "Hopsworks public http port",
           :type => 'string'
 
-# Hopsworks Dela - old
-  
-attribute "hopsworks/dela/domain",
-          :description => "Hopsworks Dela public domain",
-          :type => 'string'
-  
-attribute "hopsworks/dela/public_port",
-          :description => "Hopsworks Dela public port",
-          :type => 'string'
-  
 # Hops site
 
 attribute "hopsworks/dela/hops_site/domain",
