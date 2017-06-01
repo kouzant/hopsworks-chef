@@ -1676,6 +1676,15 @@ attribute "dela/dir",
           :type => 'string'
 
 # Hopsworks Dela
+attribute "hopsworks/dela/cluster_http_port",
+          :description => "Dela cluster accessible http port",
+          :type => 'string'
+
+attribute "hopsworks/dela/public_hopsworks_port",
+          :description => "Hopsworks public http port",
+          :type => 'string'
+
+# Hopsworks Dela - old
   
 attribute "hopsworks/dela/domain",
           :description => "Hopsworks Dela public domain",

@@ -193,6 +193,14 @@ INSERT INTO variables VALUES ("hopsutil_version", "<%= node["hops"]["util_versio
 -- dela
 --
 
+INSERT INTO variables VALUES ("dela_cluster_up","<%= @dela_ip %>");
+
+INSERT INTO variables VALUES ("dela_cluster_http_port","<%= ["hopsworks"]["dela"]["cluster_http_port"] %>");
+
+INSERT INTO variables VALUES ("dela_hopsworks_public_port","<%= ["hopsworks"]["dela"]["public_hopsworks_port"] %>");
+
+-- dela old
+
 INSERT INTO variables VALUES ("hopsworks_domain","<%= node["hopsworks"]["dela"]["domain"] %>");
 
 INSERT INTO variables VALUES ("hopsworks_public_port","<%= node["hopsworks"]["dela"]["public_port"] %>");

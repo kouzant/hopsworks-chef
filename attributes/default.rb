@@ -123,6 +123,9 @@ default["hopsworks"]["org_city"]                       = "Stockholm"
 # Dela  - please do not change without consulting dela code
 #
 
+default["hopsworks"]["dela"]["cluster_http_port"]      = 8080
+default["hopsworks"]["dela"]["public_hopsworks_port"]  = 8080
+
 default["hopsworks"]["dela"]["domain"]                 = "bbc1.sics.se"
 default["hopsworks"]["dela"]["certificate"]            = "DummyCert25100"
 default["hopsworks"]["dela"]["public_port"]            = node["hopsworks"]["port"]
