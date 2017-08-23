@@ -4,7 +4,7 @@ source 'https://supermarket.chef.io'
 
 cookbook 'java'
 cookbook 'kagent', github: "AlexHopsworks/kagent-chef", branch: "local"
-cookbook 'hops', github: "AlexHopsworks/hops-hadoop-chef", branch: "local"
+cookbook 'hops', github: "kouzant/hops-hadoop-chef", branch: "alex_fix"
 cookbook 'ndb', github: "AlexHopsworks/ndb-chef", branch: "local"
 cookbook 'hadoop_spark', github: "AlexHopsworks/spark-chef", branch: "local"
 cookbook 'flink', github: "AlexHopsworks/flink-chef", branch: "local"
