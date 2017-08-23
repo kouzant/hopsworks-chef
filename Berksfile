@@ -29,7 +29,7 @@ cookbook 'hopsmonitor', github: "AlexHopsworks/hopsmonitor-chef", branch: "local
 cookbook 'graphite', '~> 1.0.4'
 cookbook 'simple-logstash', '~> 0.2.4'
 
-cookbook 'glassfish', github: "hopshadoop/chef-glassfish", branch: "master"
+cookbook 'glassfish', github: "AlexHopsworks/chef-glassfish", branch: "local"
 
 
 cookbook 'elasticsearch', '~> 2.4.0'
