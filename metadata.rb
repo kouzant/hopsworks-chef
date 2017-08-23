@@ -1747,7 +1747,7 @@ attribute "dela/hops/library/type",
           :description => "Dela Client library type(MYSQL/DISK).",
           :type => "string"
 
-##### Dela sql
+##### Dela
 attribute "dela/mysql/ip",
           :description => "Mysql server ip",
           :type => 'string',
@@ -1796,4 +1796,8 @@ attribute "smtp/email",
 attribute "smtp/email_password",
           :description => "Password for email account. ",
           :required => "required",
+          :type => 'string'
+
+attribute "jupyter/python",
+          :description => "'true' (default) to enable the python interpreter, 'false' to disable it (more secure). ",
           :type => 'string'
