@@ -46,6 +46,8 @@ recipe  "hopsworks::slave", "Hopsworks master instance that will store only an i
 recipe  "hopsworks::dev", "Installs development libraries needed for HopsWorks development."
 recipe  "hopsworks::letsencypt", "Given a glassfish installation and a letscrypt installation, update glassfish's key."
 recipe  "hopsworks::image", "Prepare for use as a virtualbox image."
+recipe  "hopsworks::rollback", "Rollback an upgrade to Hopsworks."
+
 recipe  "hopsworks::purge", "Deletes glassfish installation."
 recipe  "hopsworks::hopssite", "Install hopssite on current vm"
 recipe  "hopsworks::dela", "Register dela on current vm"
@@ -292,6 +294,14 @@ attribute "install/ssl",
 
 attribute "install/cleanup_downloads",
           :description => "Remove any zipped binaries that were downloaded and used to install services",
+          :type => "string"
+
+attribute "install/upgrade",
+          :description => "User to upgrade the software",
+          :type => "string"
+
+attribute "install/addhost",
+          :description => "Indicates that this host will be added to an existing Hops cluster.",
           :type => "string"
 
 attribute "hopsworks/monitor_max_status_poll_try",
@@ -1541,6 +1551,22 @@ attribute "ndb/BackupDataDir",
           :description => "Directory to store mysql cluster backups in",
           :type => 'string'
 
+attribute "ndb/remote_backup_host",
+          :description => "Hostname of the machine where the backups will be stored",
+          :type => 'string'
+
+attribute "ndb/remote_backup_user",
+          :description => "User on the remote backup machine. SSH access should be configured",
+          :type => 'string'
+
+attribute "ndb/remote_backup_dir",
+          :description => "Directory on the remote backup machine that the archives will be stored",
+          :type => 'string'
+
+attribute "ndb/local_backup_dir",
+          :description => "Directory on the local MGM machine where backups will temporarily be stored",
+          :type => 'string'
+
 attribute "mysql/user",
           :description => "User that runs mysql server",
           :required => "required",
@@ -1997,3 +2023,94 @@ attribute "smtp/email_password",
           :required => "required",
           :type => 'string'
 
+#
+# LDAP
+#
+
+attribute "ldap/enabled",
+          :description => "Enable ldap auth. 'false' (default)",
+          :type => 'string'
+
+attribute "ldap/group_mapping",
+          :description => "LDAP group to hopsworks group mappings. Format: (groupA-> HOPS_USER,HOPS_ADMIN;groupB->HOPS_USER)",
+          :type => 'string'
+
+attribute "ldap/user_id",
+          :description => "The login field used by ldap. 'uid' (default)",
+          :type => 'string'
+
+attribute "ldap/user_givenName",
+          :description => "Given name field of ldap 'givenName' (default)",
+          :type => 'string'
+
+attribute "ldap/user_surname",
+          :description => "Surname field of ldap. 'sn' (default)",
+          :type => 'string'
+
+attribute "ldap/user_email",
+          :description => "Email field of ldap. 'mail' (default)",
+          :type => 'string'
+
+attribute "ldap/user_search_filter",
+          :description => "LDAP user search filter. 'uid=%s' (default)",
+          :type => 'string'
+
+attribute "ldap/group_search_filter",
+          :description => "LDAP group search filter. 'member=%d' (default)",
+          :type => 'string'
+
+attribute "ldap/attr_binary",
+          :description => "LDAP global Unique Identity Code of the object attribute. 'java.naming.ldap.attributes.binary' (default)",
+          :type => 'string'
+
+attribute "ldap/group_target",
+          :description => "LDAP search result group target 'cn' (default)",
+          :type => 'string'
+
+attribute "ldap/dyn_group_target",
+          :description => "LDAP search result dynamic group target 'memberOf' (default)",
+          :type => 'string'
+
+attribute "ldap/user_dn",
+          :description => "LDAP baseDN. '' (default)",
+          :type => 'string'
+
+attribute "ldap/group_dn",
+          :description => "LDAP groupDN. '' (default)",
+          :type => 'string'
+
+attribute "ldap/account_status",
+          :description => "Hopsworks account status given for new LDAP user. '4' activated account (default)",
+          :type => 'string'
+#LDAP External JNDI Resource
+attribute "ldap/provider_url",
+          :description => "LDAP provider url. ",
+          :type => 'string'
+
+attribute "ldap/jndilookupname",
+          :description => "LDAP jndi lookup name. ",
+          :type => 'string'
+
+attribute "ldap/attr_binary_val",
+          :description => "LDAP global Unique Identity Code of the user object. 'entryUUID' (default)",
+          :type => 'string'
+
+attribute "ldap/security_auth",
+          :description => "LDAP security auth type. 'none' (default) possible values ('none', 'simple', 'sasl_mech')",
+          :type => 'string'
+
+attribute "ldap/security_principal",
+          :description => "LDAP security principal. '' (default)",
+          :type => 'string'
+
+attribute "ldap/security_credentials",
+          :description => "LDAP security credentials. '' (default)",
+          :type => 'string'
+
+attribute "ldap/referral",
+          :description => "LDAP used to redirect a client's request to another server . 'follow' (default) possible values ('ignore', 'follow', 'throw')",
+          :type => 'string'
+
+attribute "ldap/additional_props",
+          :description => "LDAP additional properties. '' (default)",
+          :type => 'string'
