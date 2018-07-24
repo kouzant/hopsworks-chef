@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/usr/bin/env bash
 
 if [ $# -ne 1  ]; then
  echo "incorrect usage"
@@ -9,9 +9,9 @@ DOMAIN="$1"
 
 # Delete certificates from the file system
 function delete {
-    rm -f <%= @int_ca_dir %>/private/$1.key.pem
-    rm -f <%= @int_ca_dir %>/certs/$1.cert.pem
-    rm -f <%= @int_ca_dir %>/csr/$1.csr.pem
+    rm -f <%= @int_ca_dir %>/private/"$1".key.pem
+    rm -f <%= @int_ca_dir %>/certs/"$1".cert.pem
+    rm -f <%= @int_ca_dir %>/csr/"$1".csr.pem
 }
 
 # Certificate revocation is done in Hopsworks
@@ -19,4 +19,4 @@ function delete {
 delete "${DOMAIN}__*"
 
 # Revoke and delete the generic project certificate
-delete ${DOMAIN}
+delete "${DOMAIN}"
