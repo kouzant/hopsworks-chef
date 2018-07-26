@@ -5,7 +5,7 @@ metadata
 
 cookbook 'java'
 cookbook 'conda', github: "hopshadoop/conda-chef", branch: "master"
-cookbook 'kagent', github: "hopshadoop/kagent-chef", branch: "master"
+cookbook 'kagent', github: "kouzant/kagent-chef", branch: "HOPSWORKS-623"
 cookbook 'hops', github: "hopshadoop/hops-hadoop-chef", branch: "master"
 cookbook 'ndb', github: "hopshadoop/ndb-chef", branch: "master"
 cookbook 'hadoop_spark', github: "hopshadoop/spark-chef", branch: "master"
@@ -28,7 +28,7 @@ cookbook 'glassfish', github: "hopshadoop/chef-glassfish", branch: "master"
 
 cookbook 'ulimit', github: "hopshadoop/chef-ulimit", branch: "master"
 
-cookbook 'hive2', github: "hopshadoop/hive-chef", branch: "master"
+cookbook 'hive2', github: "kouzant/hive-chef", branch: "HOPSWORKS-623"
 
 cookbook 'graphite', '~> 1.0.4'
 cookbook 'simple-logstash', '~> 0.2.4'
