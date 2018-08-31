@@ -60,7 +60,9 @@ default['glassfish']['package_url']              = node['download_url'] + "/paya
 default['hopsworks']['cauth_version']            = "otp-auth-0.3.0.jar"
 default['hopsworks']['cauth_url']                = "#{node['download_url']}/#{node['hopsworks']['cauth_version']}"
 
-default['hopsworks']['war_url']                  = "#{node['download_url']}/hopsworks/#{node['hopsworks']['version']}/hopsworks-web.war"
+#default['hopsworks']['war_url']                  = "#{node['download_url']}/hopsworks/#{node['hopsworks']['version']}/hopsworks-web.war"
+
+default['hopsworks']['war_url']                  = "http://snurran.sics.se/hops/antonis/hopsworks-web.war"
 
 #default['hopsworks']['ca_url']                   = "#{node['download_url']}/hopsworks/#{node['hopsworks']['version']}/hopsworks-ca.war"
 default['hopsworks']['ca_url']                   = "http://snurran.sics.se/hops/antonis/hopsworks-ca.war"
