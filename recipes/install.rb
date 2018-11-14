@@ -214,7 +214,16 @@ when "rhel"
 end
 
 
-
+##
+## TODO This is just for testing
+##
+env_var_file = node['hopsworks']['domains_dir']/domain1_environment_variables
+file "#{env_var_file}" do
+  content 'MY_ENV=my_env'
+  mode 0700
+  owner node['glassfish']['user']
+  group node['glassfish']['group']
+end
 
 node.override = {
   'java' => {
@@ -242,6 +251,7 @@ node.override = {
           'master_password' => node['hopsworks']['master']['password'],
           'remote_access' => false,
           'secure' => false,
+          'environment_file' => "#{env_var_file}",
           'jvm_options' => ["-DHADOOP_HOME=#{node['hops']['dir']}/hadoop", "-DHADOOP_CONF_DIR=#{node['hops']['dir']}/hadoop/etc/hadoop", '-Dcom.sun.enterprise.tools.admingui.NO_NETWORK=true', '-Dlog4j.configuration=file:///${com.sun.aas.instanceRoot}/config/log4j.properties']
         },
         'extra_libraries' => {
