@@ -20,7 +20,7 @@ cookbook 'kkafka', github: "logicalclocks/kafka-cookbook", branch: "master"
 cookbook 'elastic', github: "logicalclocks/elasticsearch-chef", branch: "master"
 cookbook 'hopslog', github: "logicalclocks/hopslog-chef", branch: "master"
 cookbook 'hopsmonitor', github: "logicalclocks/hopsmonitor-chef", branch: "master"
-cookbook 'glassfish', github: "logicalclocks/chef-glassfish", branch: "master"
+cookbook 'glassfish', github: "kouzant/chef-glassfish", branch: "HOPSWORKS-810"
 cookbook 'hive2', github: "logicalclocks/hive-chef", branch: "master"
 
 cookbook 'ulimit', github: "logicalclocks/chef-ulimit", branch: "master"
