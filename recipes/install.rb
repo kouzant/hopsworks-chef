@@ -217,7 +217,7 @@ end
 ##
 ## TODO This is just for testing
 ##
-env_var_file = node['hopsworks']['domains_dir']/domain1_environment_variables
+env_var_file = "#{node['hopsworks']['domains_dir']}/domain1_environment_variables"
 file "#{env_var_file}" do
   content 'MY_ENV=my_env'
   mode 0700
