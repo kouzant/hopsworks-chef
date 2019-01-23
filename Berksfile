@@ -4,7 +4,7 @@ source 'https://supermarket.chef.io'
 metadata
 
 cookbook 'conda', github: "logicalclocks/conda-chef", branch: "0.7"
-cookbook 'kagent', github: "logicalclocks/kagent-chef", branch: "0.7"
+cookbook 'kagent', github: "kouzant/kagent-chef", branch: "HOPSWORKS-884"
 cookbook 'hops', github: "logicalclocks/hops-hadoop-chef", branch: "0.7"
 cookbook 'ndb', github: "logicalclocks/ndb-chef", branch: "0.7"
 cookbook 'hadoop_spark', github: "logicalclocks/spark-chef", branch: "0.7"
