@@ -44,3 +44,4 @@ ALTER TABLE `remote_user` RENAME TO `ldap_user`;
 
 ALTER TABLE `tensorboard` DROP COLUMN `secret`;
 
+ALTER TABLE `jwt_signing_key` MODIFY COLUMN `name` VARCHAR(45) NOT NULL;
