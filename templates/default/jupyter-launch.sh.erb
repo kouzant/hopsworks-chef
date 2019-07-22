@@ -90,7 +90,7 @@ echo $! > "$PID_FILE"
 timeout=0
 while [ $timeout -lt $WAIT_START ] ; do
   sleep 1
-  grep 'The Jupyter Notebook is running at' "$LOGFILE"
+  grep 'JupyterLab is running at' "$LOGFILE"
         if [ $? -eq 0 ] ; then
           break
         fi
