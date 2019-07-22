@@ -89,7 +89,7 @@ elif [ "$1" == "start" ] ; then
       help
     fi
 
-    pid=$(sudo ps -ef | grep jupyter-notebook | grep "port=$6" | awk '{print $2}')
+    pid=$(sudo ps -ef | grep jupyter-lab | grep "port=$6" | awk '{print $2}')
 
     if [ "$pid" != "" ] ; then
         su $JUPYTER_USER -c "${DOMAINS_DIR}/domain1/bin/jupyter-kill.sh $2 $pid $6"
@@ -132,25 +132,25 @@ elif [ "$1" == "start" ] ; then
     sudo chown -R "${JUPYTER_USER}":"${JUPYTER_GROUP}" "$2"
     sudo chmod -R 770 "$2"
      
-    # Launch the jupyter notebook
+    # Launch JupyterLab
     su "${JUPYTER_USER}" -c "${DOMAINS_DIR}/domain1/bin/jupyter-launch.sh $2 $3 $4 $5 $6 $7 $8 $9 ${10} ${11}"
 
 elif [ "$1" == "ping" ] ; then
     if [ $# -ne 2 ]; then
 	help
     fi
-    sudo ps -ef | grep -v 'grep' | grep -i jupyter-notebook | grep "$2"
+    sudo ps -ef | grep -v 'grep' | grep -i jupyter-lab | grep "$2"
     if [ $? -ne 0 ] ; then
 	echo "Error checking PID: $2"
-	echo "Are you trying to ping a non jupyter-notebook process?"
+	echo "Are you trying to ping a non jupyter-lab process?"
 	exit 12
     fi
     kill -0 "$2"
 
 # list 
 elif [ "$1" == "list" ] ; then
-    # This command will output line-separated PIDs for all running jupyter-notebooks into the tmp file, from where it is read by Hopsworks
-    sudo ps -ef | grep -v 'grep' | grep -i jupyter-notebook | awk '{print $2}' > /tmp/jupyterNotebookServer.pids
+    # This command will output line-separated PIDs for all running jupyter-lab(s) into the tmp file, from where it is read by Hopsworks
+    sudo ps -ef | grep -v 'grep' | grep -i jupyter-lab | awk '{print $2}' > /tmp/jupyterNotebookServer.pids
 else
   help
 fi
