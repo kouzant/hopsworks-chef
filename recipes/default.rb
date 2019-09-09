@@ -966,8 +966,8 @@ kagent_keys "#{homedir}" do
 end
 
 if node['kagent']['enabled'].casecmp? "true"
-  kagent_config "glassfish-as" do
-    service "glassfish-#{node['hopsworks']['domain_name']}"
+  kagent_config "glassfish-domain1" do
+    service "glassfish_#{node['hopsworks']['domain_name']}"
     log_file "#{node['hopsworks']['domains_dir']}/#{node['hopsworks']['domain_name']}/logs/server.log"
     restart_agent false
   end
