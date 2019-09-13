@@ -74,8 +74,16 @@ mkdir -p nbextensions
 
 cd "$SECRET_DIR" || exit
 
+# Check if JupyterLab is installed otherwise start Notebook
+${ANACONDA_ENV}/bin/jupyter lab -h
+if [ $? -eq 0 ];
+then
+    flavour="lab"
+else
+    flavour="notebook"
+fi
 # setsid works, and 'nohup' doesnt work as nohup processes cant write their stderr/stdout to the logfile 
-setsid ${ANACONDA_ENV}/bin/jupyter lab --debug --no-browser --NotebookApp.port="$PORT" --NotebookApp.token="$TOKEN" </dev/zero &> "$LOGFILE"  &
+setsid ${ANACONDA_ENV}/bin/jupyter "$flavour" --debug --no-browser --NotebookApp.port="$PORT" --NotebookApp.token="$TOKEN" </dev/zero &> "$LOGFILE"  &
 echo $! > "$PID_FILE"
 
 # Wait for jupyter to start
