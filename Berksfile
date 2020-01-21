@@ -23,7 +23,6 @@ cookbook 'glassfish', github: "logicalclocks/chef-glassfish", branch: "master"
 cookbook 'hops_airflow', github: "logicalclocks/airflow-chef", branch: "master"
 cookbook 'hive2', github: "logicalclocks/hive-chef", branch: "master"
 cookbook 'cloud', github: "logicalclocks/cloud-chef", branch: "master"
-cookbook 'kube-hops', github: "logicalclocks/kube-hops-chef", branch: "master"
 
 cookbook 'ulimit', github: "logicalclocks/chef-ulimit", branch: "master"
 cookbook 'java'
