@@ -3,25 +3,25 @@ source 'https://supermarket.chef.io'
 
 metadata
 
-cookbook 'conda', github: "logicalclocks/conda-chef", branch: "master"
-cookbook 'kagent', github: "logicalclocks/kagent-chef", branch: "master"
-cookbook 'hops', github: "logicalclocks/hops-hadoop-chef", branch: "master"
+cookbook 'conda', github: "kouzant/conda-chef", branch: "consul"
+cookbook 'kagent', github: "kouzant/kagent-chef", branch: "consul"
+cookbook 'hops', github: "kouzant/hops-hadoop-chef", branch: "consul"
 cookbook 'ndb', github: "logicalclocks/ndb-chef", branch: "master"
 cookbook 'hadoop_spark', github: "logicalclocks/spark-chef", branch: "master"
 cookbook 'flink', github: "logicalclocks/flink-chef", branch: "master"
-cookbook 'livy', github: "logicalclocks/livy-chef", branch: "master"
+cookbook 'livy', github: "kouzant/livy-chef", branch: "consul"
 cookbook 'drelephant', github: "logicalclocks/dr-elephant-chef", branch: "master"
 cookbook 'epipe', github: "logicalclocks/epipe-chef", branch: "master"
 cookbook 'tensorflow', github: "logicalclocks/tensorflow-chef", branch: "master"
 cookbook 'dela', github: "logicalclocks/dela-chef", branch: "master"
-cookbook 'kzookeeper', github: "logicalclocks/kzookeeper", branch: "master"
+cookbook 'kzookeeper', github: "kouzant/kzookeeper", branch: "consul"
 cookbook 'kkafka', github: "logicalclocks/kafka-cookbook", branch: "master"
-cookbook 'elastic', github: "logicalclocks/elasticsearch-chef", branch: "master"
+cookbook 'elastic', github: "kouzant/elasticsearch-chef", branch: "consul"
 cookbook 'hopslog', github: "logicalclocks/hopslog-chef", branch: "master"
 cookbook 'hopsmonitor', github: "logicalclocks/hopsmonitor-chef", branch: "master"
 cookbook 'glassfish', github: "logicalclocks/chef-glassfish", branch: "master"
-cookbook 'hops_airflow', github: "logicalclocks/airflow-chef", branch: "master"
-cookbook 'hive2', github: "logicalclocks/hive-chef", branch: "master"
+cookbook 'hops_airflow', github: "kouzant/airflow-chef", branch: "consul"
+cookbook 'hive2', github: "kouzant/hive-chef", branch: "consul"
 cookbook 'consul', github: "logicalclocks/consul-chef", branch: "master"
 
 
