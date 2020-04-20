@@ -52,7 +52,7 @@ group node['hops']['hdfs']['user'] do
 end
 
 user node['hopsworks']['user'] do
-  home node['hopsworks']['user-home']
+  home node['glassfish']['user-home']
   gid node['hopsworks']['group']
   action :create
   shell "/bin/bash"
