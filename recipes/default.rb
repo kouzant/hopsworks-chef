@@ -1,4 +1,4 @@
-include_recipe "java"
+# i
 
 Chef::Recipe.send(:include, Hops::Helpers)
 Chef::Resource.send(:include, Hops::Helpers)
