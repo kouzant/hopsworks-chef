@@ -3,10 +3,10 @@ source 'https://supermarket.chef.io'
 
 metadata
 
-cookbook 'conda', github: "logicalclocks/conda-chef", branch: "2.4"
-cookbook 'kagent', github: "logicalclocks/kagent-chef", branch: "2.4"
+cookbook 'conda', github: "kouzant/conda-chef", branch: "HOPSWORKS-2808_2.4"
+cookbook 'kagent', github: "kouzant/kagent-chef", branch: "HOPSWORKS-2808_2.4"
 cookbook 'hops', github: "logicalclocks/hops-hadoop-chef", branch: "2.4"
-cookbook 'ndb', github: "logicalclocks/ndb-chef", branch: "2.4"
+cookbook 'ndb', github: "kouzant/ndb-chef", branch: "HOPSWORKS-2808_2.4"
 cookbook 'hadoop_spark', github: "logicalclocks/spark-chef", branch: "2.4"
 cookbook 'flink', github: "logicalclocks/flink-chef", branch: "2.4"
 cookbook 'livy', github: "logicalclocks/livy-chef", branch: "2.4"
@@ -18,7 +18,7 @@ cookbook 'kkafka', github: "logicalclocks/kafka-cookbook", branch: "2.4"
 cookbook 'elastic', github: "logicalclocks/elasticsearch-chef", branch: "2.4"
 cookbook 'hopslog', github: "logicalclocks/hopslog-chef", branch: "2.4"
 cookbook 'hopsmonitor', github: "logicalclocks/hopsmonitor-chef", branch: "2.4"
-cookbook 'hops_airflow', github: "logicalclocks/airflow-chef", branch: "2.4"
+cookbook 'hops_airflow', github: "kouzant/airflow-chef", branch: "HOPSWORKS-2808_2.4"
 cookbook 'hive2', github: "logicalclocks/hive-chef", branch: "2.4"
 cookbook 'consul', github: "logicalclocks/consul-chef", branch: "2.4"
 cookbook 'kube-hops', github: "logicalclocks/kube-hops-chef", branch: "2.4"
