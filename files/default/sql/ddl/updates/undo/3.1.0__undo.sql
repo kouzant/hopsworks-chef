@@ -21,3 +21,7 @@ ALTER TABLE `hopsworks`.`python_dep` DROP INDEX `dependency`;
 ALTER TABLE `hopsworks`.`python_dep` DROP COLUMN `repo_url`;
 ALTER TABLE `hopsworks`.`python_dep` ADD CONSTRAINT `dependency` UNIQUE (`dependency`,`version`,`install_type`,
                                                                          `repo_id`);
+DROP TABLE IF EXISTS `hopsworks`.`pki_certificate`;
+DROP TABLE IF EXISTS `hopsworks`.`pki_crl`;
+DROP TABLE IF EXISTS `hopsworks`.`pki_key`;
+DROP TABLE IF EXISTS `hopsworks`.`pki_serial_number`;
