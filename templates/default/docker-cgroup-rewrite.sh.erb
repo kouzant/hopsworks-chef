@@ -27,7 +27,7 @@ else
 fi
 
 _apply_cgroup2(){
-  if [ ! -d "$CGROUP_MOUNT/docker"]; then
+  if [ ! -d "$CGROUP_MOUNT/docker" ]; then
     echo "Docker cgroup not yet created"
     exit 1
   fi
@@ -37,7 +37,7 @@ _apply_cgroup2(){
 }
 
 _apply_cgroup1(){
-  if [ ! -d "$CGROUP_MOUNT/memory/docker"]; then
+  if [ ! -d "$CGROUP_MOUNT/memory/docker" ]; then
     echo "Docker cgroup not yet created"
     exit 1
   fi
