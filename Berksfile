@@ -5,7 +5,7 @@ metadata
 
 cookbook 'conda', github: "gibchikafa/conda-chef", branch: "remove_gnu"
 cookbook 'kagent', github: "gibchikafa/kagent-chef", branch: "ubuntu_upgrade"
-cookbook 'hops', github: "gibchikafa/hops-hadoop-chef", branch: "centos8"
+cookbook 'hops', github: "kouzant/hops-hadoop-chef", branch: "centos8_ubu22"
 cookbook 'ndb', github: "gibchikafa/ndb-chef", branch: "ubuntu_upgrade"
 cookbook 'hadoop_spark', github: "logicalclocks/spark-chef", branch: "master"
 cookbook 'flink', github: "logicalclocks/flink-chef", branch: "master"
