@@ -6,7 +6,7 @@ metadata
 cookbook 'conda', github: "logicalclocks/conda-chef", branch: "3.4"
 cookbook 'kagent', github: "logicalclocks/kagent-chef", branch: "3.4"
 cookbook 'hops', github: "logicalclocks/hops-hadoop-chef", branch: "3.4"
-cookbook 'ndb', github: "logicalclocks/ndb-chef", branch: "3.4"
+cookbook 'ndb', github: "kouzant/ndb-chef", branch: "debug_restore"
 cookbook 'hadoop_spark', github: "logicalclocks/spark-chef", branch: "3.4"
 cookbook 'flink', github: "logicalclocks/flink-chef", branch: "3.4"
 cookbook 'livy', github: "logicalclocks/livy-chef", branch: "3.4"
